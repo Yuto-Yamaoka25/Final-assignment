@@ -1,0 +1,31 @@
+<!-- index.ejs -->
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>top</title>
+</head>
+
+<body>
+  <ul class = "user-list">
+    <% for (const user of users) { %>
+      <li class="user-name"><%= user %></li>
+    <% } %>
+  </ul>
+  追加するメモを入力<br>
+  <input type="text" class="input-text" />
+  <button class="send-button">追加</button>
+  <input type="file" id="image-input" style="display:none;" />
+  <button class="image-button">画像を追加</button>
+  </ul>
+  <br>
+  削除するメモを入力<br>
+  <input type="text" class="dl-text" />
+  <button class="delete-button">削除</button>
+  <br>
+  <script src="/static/index.js" defer></script>
+</body>
+
+</html>
